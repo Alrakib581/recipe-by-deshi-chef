@@ -6,4 +6,4 @@
 * The application has a private route for users
 * firebase auth For user creating and authentication.
 * The application will be improving day by day.
-* Live Site Link: https://helpful-biscochitos-0081e3.netlify.app/
+* Live Site Link: https://recipes-by-deshi-chef.web.app/
