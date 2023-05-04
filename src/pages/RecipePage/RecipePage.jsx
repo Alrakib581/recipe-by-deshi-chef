@@ -7,7 +7,6 @@ import LazyLoad from 'react-lazy-load';
 const RecipePage = () => {
     const singleChefData = useLoaderData();
     const {photo,name,bio,likes,numberOfRecipe,experience, chefrecipes,id} = singleChefData;
-    // console.log(chefrecipes);
     return (
         <div>
             {/* chef recipe page Banner section  */}

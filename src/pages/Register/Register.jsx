@@ -10,6 +10,8 @@ const Register = () => {
   const { createUser, updateUser, createUserByGoogle,createUserByGithub } = useContext(AuthContext)
   const [error , setError] = useState('')
   const [passwordType, setPasswordType] = useState(false)
+
+  // for collecting and handling form data for sumbite 
     const handleRegister = event =>{
       event.preventDefault()
       const form = event.target;
@@ -20,15 +22,13 @@ const Register = () => {
       createUser(email, password)
       .then(result =>{
         const createdUser = result.user;
-        console.log(createdUser)
+        // console.log(createdUser)
         navigate('/')
         setError('')
         event.target.reset()
         userNamePhoto(createdUser, name, photo)
-        // console.log(photo)
       })
       .catch(error =>{
-        // console.log(error.message)
         if(error.message === 'Firebase: Password should be at least 6 characters (auth/weak-password).'){
           setError('Your Password should be at least 6 characters.')
         }
@@ -42,22 +42,20 @@ const Register = () => {
     
 
     const userNamePhoto = (user,name,photo)=>{
-      console.log(user)
       updateUser(user,{
         displayName: name, photoURL: photo
       })
       .then(()=>{
-        console.log('updad')
+        console.log('updated')
       })
       .catch(error=>{
-        console.log(error)
+        setError(error)
       })
     }
     //google
     const provider = new GoogleAuthProvider()
     const auth = getAuth()
     const googleBtn = ()=>{
-      console.log('cliked')
       createUserByGoogle(auth, provider)
       .then(result =>{
         const newUser = result.user
@@ -65,7 +63,7 @@ const Register = () => {
         navigate('/')
       })
       .then(error => {
-        console.log(error)
+        setError(error)
       })
       
     }

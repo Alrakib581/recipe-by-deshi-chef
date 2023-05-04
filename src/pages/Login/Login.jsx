@@ -14,8 +14,9 @@ const Login = () => {
     const [error, setError] = useState('');
     const [ptype, setPtype] = useState(false);
     const handleType = ()=>{
-        setPtype(!ptype)
+      setPtype(!ptype)
     }
+    // for collecting form information and submit start
     const handleLogin = event =>{
       event.preventDefault()
       const form = event.target;
@@ -41,8 +42,9 @@ const Login = () => {
         })
       
     }
-    // console.log(error);
-       //google
+   // for collecting form information and submit end
+
+       //google auth code 
     const provider = new GoogleAuthProvider()
     const auth = getAuth()
     const googleBtn = ()=>{
@@ -59,7 +61,7 @@ const Login = () => {
       
     }
 
-     //github
+     //github auth code 
      const gprovider = new GithubAuthProvider()
      const githubBtn = ()=>{
        console.log('cliked')
