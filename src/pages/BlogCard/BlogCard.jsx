@@ -1,7 +1,6 @@
 import React from 'react';
 
 const BlogCard = ({blog}) => {
-    // console.log(blog)
     const {title, details} = blog;
     return (
         <div className='col-md-6'>

@@ -7,6 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 const RecipeCard = ({chefrecipe}) => {
     const { recipe1name, recpelogo, ratings, cookmethod, ingradients } = chefrecipe;
     const [btnCount, setBtnCount] = useState(0)
+    // for button click count 
     const handleClik =()=>{
         let newCount = btnCount + 1
         setBtnCount(newCount);
@@ -14,7 +15,9 @@ const RecipeCard = ({chefrecipe}) => {
     const toasti = ()=> toast('The recipe is your favorite')
     return (
         <div className='p-3 mb-2 col-md-4'>
+                {/* for showing toast from */}
                 <ToastContainer></ToastContainer>
+                {/* for showing toast from */}
             <div>
                 <img style={{height: '300px', width:'100%'}} className='img-fluid rounded' src={recpelogo} alt="" />
             </div>

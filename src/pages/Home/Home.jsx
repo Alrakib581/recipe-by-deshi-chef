@@ -16,7 +16,6 @@ const Home = () => {
       setIsLoading(false)
     })
   },[])
-  // console.log(chefs)
   return (
     <div>
       {/* banner Carousel section start  */}

@@ -1,7 +1,6 @@
 import React from 'react';
 
 const FooterInfo = ({info}) => {
-    // console.log(info)
     const {title, description} = info;
     return (
         <div className=''>

@@ -17,7 +17,7 @@ const Blog = () => {
     },[])
     return (
 
-        <div className=''>
+        <div>
             <div className='text-center py-4'>
                 <img className='img-fluid'style={{width:'500px'}} src="https://cdn.pixabay.com/photo/2021/02/11/11/21/meeting-6004997_960_720.png" alt="" />
             </div>
